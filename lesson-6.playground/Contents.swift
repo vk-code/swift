@@ -34,6 +34,7 @@ struct Queue<T: Vehicle> {
     }
     
     mutating func ​​pop​() -> T? {
+        guard !_elements.isEmpty else { return nil }
         return _elements.removeLast()
     }
     
@@ -84,3 +85,10 @@ let muscleCars = cars.getByPower(500)
 
 cars[0]
 cars[70]
+
+cars.​​pop​()
+cars.​​pop​()
+cars.​​pop​()
+cars.​​pop​()
+cars.​​pop​()
+cars.​​pop​()
